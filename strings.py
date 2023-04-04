@@ -31,3 +31,33 @@ def get_length(string):
     count += 1
   return count
 
+#string conditionals
+def contains(big_string, little_string):
+  return little_string in big_string
+
+# def common_letters(string_one, string_two):
+#   common_letters = []
+#   for char in string_one:
+#     if char in string_one and char in string_two:
+#       if char not in common_letters:
+#         common_letters.append(char)
+#   return common_letters
+
+#better way to solve:
+def common_letters(string_one, string_two):
+  common_letters = []
+  for char in string_one:
+    if char in string_two and char not in common_letters:
+      common_letters.append(char)
+  return common_letters
+
+print("e" in "blueberry")
+# => True
+print("a" in "blueberry")
+# => False
+print("e" in "blueberry")
+# => True
+print("a" in "blueberry")
+# => False
+
+
