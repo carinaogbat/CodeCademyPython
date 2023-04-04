@@ -13,3 +13,21 @@ final_word = company_motto[-4:]
 print(second_to_last) #prints f
 print(final_word) #prints life
 
+
+#string immutability (need to create new string to change string)
+first_name = "Bob"
+last_name = "Daily"
+fixed_first_name = "R" + first_name[-2:]
+##get R plus ob to have "Rob"
+
+#escape characters
+password = "theycallme\"crazy\"91"
+##add backslash escape at beginning of ' and before end of '
+
+#iterating through strings
+def get_length(string):
+  count = 0
+  for char in string:
+    count += 1
+  return count
+
