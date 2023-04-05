@@ -101,5 +101,26 @@ print(author_last_names)
 
   
 
+#can split strings with escape characters
+#.split('\n') - splits by line breaks
+#.split('\t') - splits by tabs
+spring_storm_text = \
+"""The sky has given over 
+its bitterness. 
+Out of the dark change 
+all day long 
+rain falls and falls 
+as if it would never end. 
+..."""
 
+spring_storm_lines = spring_storm_text.split('\n')
+print(spring_storm_lines)
+# prints ['The sky has given over ', 'its bitterness. ', 'Out of the dark change ', 'all day long ', 
+# 'rain falls and falls ', 'as if it would never end. ']
 
+#JOINING STRINGS 'delimiter'.join(list_you_want_to_join)
+# my_munequita = ['My', 'Spanish', 'Harlem', 'Mona', 'Lisa']
+# print(' '.join(my_munequita))
+# => 'My Spanish Harlem Mona Lisa'
+reapers_line_one_words = ["Black", "reapers", "with", "the", "sound", "of", "steel", "on", "stones"]
+reapers_line_one = ' '.join(reapers_line_one_words)
