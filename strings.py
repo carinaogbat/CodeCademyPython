@@ -1,3 +1,4 @@
+#STRING INDEXING
 first_name = "Reiko"
 last_name = "Matsuki"
 def password_generator(first_name, last_name):
@@ -71,6 +72,32 @@ def password_generator(user_name):
   for i in range(0, len(user_name)):
     password += user_name[i-1]
   return password
+
+#STRING METHODS:
+# .lower() - all lowercase
+# .upper() - all uppercase
+# .title() - capitalizes all first letters
+# .split() - splits at spaces as default, otherwise by delimeter .split('delimeter')
+test_title = 'the cat in the hat'
+test_title = test_title.title()
+print(test_title) # prints The Cat In The Hat
+
+#get last names through a for loop, string splitting, and indexing
+authors = """Audre Lorde,Gabriela Mistral,Jean Toomer,An Qi,Walt Whitman,Shel Silverstein,Carmen Boullosa,
+Kamala Suraiyya,Langston Hughes,Adrienne Rich,Nikki Giovanni"""
+author_names = authors.split(',')
+author_last_names = []
+for author in author_names:
+  author_last_names.append(author.split()[-1])
+print(author_last_names)
+#prints 12345768
+authors = "Audre Lorde,Gabriela Mistral,Jean Toomer,An Qi,Walt Whitman,Shel Silverstein,Carmen Boullosa,Kamala Suraiyya,Langston Hughes,Adrienne Rich,Nikki Giovanni"
+author_names = authors.split(',')
+author_last_names = []
+for author in author_names:
+  author_last_names.append(author.split()[-1])
+print(author_last_names)
+#prints ['Lorde', 'Mistral', 'Toomer', 'Qi', 'Whitman', 'Silverstein', 'Boullosa', 'Suraiyya', 'Hughes', 'Rich', 'Giovanni']
 
   
 
