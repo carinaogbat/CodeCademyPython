@@ -60,4 +60,19 @@ print("e" in "blueberry")
 print("a" in "blueberry")
 # => False
 
+#using range and length to shift by index
+# the function should generate the username AbeSimp from Abe Simpson
+def username_generator(first_name, last_name):
+  return first_name[:3] + last_name[:4]
+
+#this function should shift all letters of username to the right. "apple" becomes "epple"
+def password_generator(user_name):
+  password = ""
+  for i in range(0, len(user_name)):
+    password += user_name[i-1]
+  return password
+
+  
+
+
 
