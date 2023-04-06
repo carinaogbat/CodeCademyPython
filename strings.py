@@ -80,7 +80,8 @@ def password_generator(user_name):
 # str.split() - splits at spaces as default, otherwise by delimeter var.split('delimeter')
 # delimeter.join(str) - ' '.join(str) - joins at delimeter delimeter.join(str)
 # str.strip() - removes all whitespace characters from beginning to end, you can also strip
-    #with a character argument str.strip('!') *note this will only strip argument and not spaces
+    #with a character argument str.strip('!') ***note this will only strip argument and not spaces***
+    #may have to use str.strip('!').strip()
 # str.replace(' ', '.') - takes two arguments and replaces all instances of first argument with second argument
 # str.find('t') - takes string as argument and returns first index value where string is located
 # str.format(var, var) - takes variables as an argument and includes them in string it is run on by
