@@ -107,8 +107,42 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 
 #------------------------------------------------
 # Start coding below!
-daily_sales_replaced = daily_sales.replace(';,;', ' ')
+daily_sales_replaced = daily_sales.replace(';,;', '+')
 daily_transactions = daily_sales_replaced.split(',')
-print(daily_transactions)
-daily_transactions_split = [],
+# print(daily_transactions)
+daily_transactions_split = []
+for transaction in daily_transactions:
+  daily_transactions_split.append(transaction.split('+'))
+print(daily_transactions_split)
+transactions_clean = []
+for transaction in daily_transactions_split:
+  transaction_clean = []
+  for data in transaction:
+    transaction_clean.append(data.strip())
+  transactions_clean.append(transaction_clean)
+print(transactions_clean)
+customers = []
+sales = []
+thread_sold = []
+for transaction in transactions_clean:
+  customers.append(transaction[0])
+  sales.append(transaction[1])
+  thread_sold.append(transaction[2])
+print(customers)
+print(sales)
+print(thread_sold)
+total_sales = 0
+for sale in sales:
+  sale = sale.strip('$')
+  sale = float(sale)
+  total_sales += sale
+print(total_sales)
+print(thread_sold)
+thread_sold_split = []
+for thread in thread_sold:
+  if "&" in thread:
+    thread_sold_split.append(thread.split('&'))
+  else:
+    thread_sold_split.append(thread)
+print(thread_sold_split)
 
