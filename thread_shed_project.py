@@ -140,9 +140,18 @@ print(total_sales)
 print(thread_sold)
 thread_sold_split = []
 for thread in thread_sold:
-  if "&" in thread:
-    thread_sold_split.append(thread.split('&'))
-  else:
-    thread_sold_split.append(thread)
-print(thread_sold_split)
+  for color in thread.split('&'):
+    thread_sold_split.append(color)
 
+print(thread_sold_split)
+def color_count(color):
+  count = 0
+  for col in thread_sold_split:
+    if col == color:
+      count += 1
+  return count
+print(color_count('white'))
+colors = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
+for color in colors:
+  count = color_count(color)
+print("There were {count} pieces of {color} sold today".format(count=count, color=color))
