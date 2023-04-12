@@ -14,3 +14,9 @@ with open('just_the_first.txt') as first_line_doc:
 
 #can create a new file with open function and "w" (write) argument,
 #default argument for open is "r" (to read)
+with open('bad_bands.txt', 'w') as bad_bands_doc:
+  bad_bands_doc.write("One Direction")
+
+#you can also use open to add to a file with the "a" argument
+with open("cool_dogs.txt", "a") as cool_dogs_file:
+  cool_dogs_file.write("\nAir Buddy") #this will add Air Buddy to the file as a newline
