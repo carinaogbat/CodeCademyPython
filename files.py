@@ -104,11 +104,23 @@ with open("logger.csv", "w") as logger_csv:
   for item in access_log:
     log_writer.writerow(item)
 
-#can also import json to use open() to open and prase json files into a Python dictionary
+#can also import json and use open and json.load() to open and parse json files into a Python dictionary
 import json
 with open("message.json") as message_json:
   message = json.load(message_json)
   print(message['text'])
+
+
+#you can also parse a python dictionary and turn it into a json file using open and the json.dump() method
+data_payload = [
+  {'interesting message': 'What is JSON? A web application\'s little pile of secrets.',
+   'follow up': 'But enough talk!'}
+]
+
+import json
+
+with open('data.json', 'w') as data_json:
+  json.dump(data_payload, data_json)
 
 
 
