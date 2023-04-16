@@ -1,4 +1,5 @@
-#using open to read a file amd readlines() to read each line in file
+#using open to read a file amd readlines() to read each line in file 
+# ***can also just use read() to get entire thing as string
 with open('how_many_lines.txt') as lines_doc:
   for line in lines_doc.readlines():
     print(line)
