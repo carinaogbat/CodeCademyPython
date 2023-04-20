@@ -22,3 +22,20 @@ class Grade:
 passing_grade = Grade()
 print(passing_grade.minimum_passing)
 #=> 65
+
+#defining a method on a class
+class Rules:
+
+  def washing_brushes(self):
+    return "Point bristles towards the basin while washing your brushes."
+
+#defining method with arguments on a cass
+class Circle:
+  pi = 3.14
+  def area(self, radius):
+    return self.pi * radius ** 2
+
+circle = Circle()
+pizza_area = circle.area(6)
+teaching_table_area = circle.area(18)
+round_room_area = circle.area(5730)
