@@ -152,3 +152,30 @@ for item in can_we_count_it:
 # <class 'str'> has the count attribute
 # <class 'int'> does not have the count attribute
 # <class 'list'> has the count attribute
+
+class Circle:
+  pi = 3.14
+  def __init__(self, diameter):
+    print("Creating circle with diameter {d}".format(d=diameter))
+    # Add assignment for self.radius here:
+    self.radius = diameter / 2
+
+  def circumference(self):
+    self.circumference = 2 * self.pi * self.radius
+    return self.circumference
+
+medium_pizza = Circle(12)
+teaching_table = Circle(36)
+round_room = Circle(11460)
+#=>
+# Creating circle with diameter 12
+# Creating circle with diameter 36
+# Creating circle with diameter 11460
+print(medium_pizza.circumference())
+print(teaching_table.circumference())
+print(round_room.circumference())
+
+#=>
+# 37.68
+# 113.04
+# 35984.4
