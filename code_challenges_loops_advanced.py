@@ -35,6 +35,12 @@ def larger_sum(lst1, lst2):
     return lst1
   else: 
     return lst2
+#***QUESTION***
+# Create a function named over_nine_thousand() that takes a list of numbers named lst as a parameter.
+# The function should sum the elements of the list until the sum is greater than 9000. When this happens, 
+# the function should return the sum. If the sum of all of the elements is never greater than 9000, the function
+# should return total sum of all the elements. If the list is empty, the function should return 0.
+# For example, if lst was [8000, 900, 120, 5000], then the function should return 9020.
 
 #MY SOLUTION
 #Write your function here
@@ -62,3 +68,29 @@ def over_nine_thousand(lst):
     if (sum > 9000):
       break
   return sum
+
+
+#****QUESTION****
+# Create a function named max_num() that takes a list of numbers named nums as a parameter.
+
+# The function should return the largest number in nums
+#MY SOLUTION
+#Write your function here
+def max_num(nums):
+  max_num = nums[0]
+  for num in nums:
+    if num > max_num:
+      max_num = num
+  return max_num
+
+
+#Uncomment the line below when your function is done
+print(max_num([50, -10, 0, 75, 20]))
+
+#THEIR SOLUTION
+def max_num(nums):
+  maximum = nums[0]
+  for number in nums:
+    if number > maximum:
+      maximum = number
+  return maximum
