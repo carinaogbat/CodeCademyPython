@@ -35,3 +35,30 @@ def larger_sum(lst1, lst2):
     return lst1
   else: 
     return lst2
+
+#MY SOLUTION
+#Write your function here
+def over_nine_thousand(lst):
+  if len(lst) == 0:
+    return 0
+  else:
+    sum = 0
+    for num in lst:
+      sum += num
+      if sum > 9000:
+        return sum
+    return sum
+
+
+
+#Uncomment the line below when your function is done
+print(over_nine_thousand([8000, 900, 120, 5000]))
+
+#THEIR SOLUTION
+def over_nine_thousand(lst):
+  sum = 0
+  for number in lst:
+    sum += number
+    if (sum > 9000):
+      break
+  return sum
