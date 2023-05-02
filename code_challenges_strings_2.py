@@ -192,5 +192,46 @@ def every_other_letter(word):
   for i in range(0, len(word), 2):
     every_other += word[i]
   return every_other
+#   In order to alternate which character is added to the every_other string, we use a range 
+#   of indices which starts at index 0 (the beginning of our word) and ends at the end of our 
+#   word. The third parameter in the range function determines what value to increment by. In 
+#   this case, we want to increment by 2 in order to get every other letter.
 
+# Another way to loop through all indices of our original string, but only add the letters 
+# that correspond to an even index. As a challenge, try solving this problem that way!
 
+#QUESTION
+# This one is similar to the last challenge. Instead of selecting every other letter, 
+# we want to reverse the entire string. This can be performed in a similar manner, 
+# but we will need to modify the range we are using. Here is what we need to do:
+# Define the function to accept one parameter for the string
+# Create a new empty string to hold the reversed string
+# Loop through the input string by starting at the end, and working towards the beginning
+# Inside the loop, append the character at the current location to the new string we initialized earlier
+# Return the result
+
+#MY SOLUTION
+# Write your reverse_string function here:
+def reverse_string(word):
+  return word[::-1]
+
+# Uncomment these function calls to test your  function:
+print(reverse_string("Codecademy"))
+# should print ymedacedoC
+print(reverse_string("Hello world!"))
+# should print !dlrow olleH
+print(reverse_string(""))
+# should print
+
+#THEIR SOLUTION
+def reverse_string(word):
+  reverse = ""
+  for i in range(len(word)-1, -1, -1):
+    reverse += word[i]
+  return reverse
+
+# This is similar to the last solution, but our range has been modified in order to start at the last index 
+# of the string (length of the string minus one) up to the first index. Since the parameter for the ending index
+#  is exclusive we need to provide the index of one more iteration than what we want to stop at. We want to stop 
+#  at 0, and since we are incrementing by -1, we will set the ending index to -1. Finally, make sure to add the 
+#  third parameter of -1. This makes us increment by -1 at each step.
