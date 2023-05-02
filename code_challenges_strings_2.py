@@ -258,3 +258,34 @@ print(make_spoonerism("a", "b"))
 #THEIR SOLUTION
 def make_spoonerism(word1, word2):
   return word2[0]+word1[1:]+" "+word1[0]+word2[1:]
+
+#QUESTION
+# Create a function named add_exclamation that has one parameter named word. This function should add 
+# exclamation points to the end of word until word is 20 characters long. If word is already at least 20 
+# characters long, just return word.
+
+#MY SOLUTION
+
+# Write your add_exclamation function here:
+def add_exclamation(word):
+  if len(word) >= 20:
+    return word
+  else:
+    exclamations = 20 - len(word)
+    return word + "!" * exclamations
+
+# Uncomment these function calls to test your function:
+print(add_exclamation("Codecademy"))
+# should print Codecademy!!!!!!!!!!
+print(add_exclamation("Codecademy is the best place to learn"))
+# should print Codecademy is the best place to learn
+
+#THEIR SOLUTION
+def add_exclamation(word):
+  while(len(word) < 20):
+    word += "!"
+  return word
+
+# This function shows how we can continuously append to our string based on some condition. In this case,
+#  we keep testing the length of the string to see if we should keep going. Once the length has reached 20, 
+#  either by adding exclamation marks or by already being long, we return the result.
