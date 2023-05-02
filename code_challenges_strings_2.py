@@ -166,4 +166,31 @@ print(check_for_name("My name is Samantha", "Jamie"))
 def check_for_name(sentence, name):
   return name.lower() in sentence.lower()
 
+#QUESTION
+# Create a function named every_other_letter that takes a string named word as a parameter. 
+# The function should return a string containing every other letter in word.
+
+#MY SOLUTION
+# Write your every_other_letter function here:
+def every_other_letter(word):
+  new_word = ''
+  for letter in word[::2]:
+    new_word += letter
+  return new_word
+
+# Uncomment these function calls to test your function:
+print(every_other_letter("Codecademy"))
+# should print Cdcdm
+print(every_other_letter("Hello world!"))
+# should print Hlowrd
+print(every_other_letter(""))
+# should print 
+
+#THEIR SOLUTION
+def every_other_letter(word):
+  every_other = ""
+  for i in range(0, len(word), 2):
+    every_other += word[i]
+  return every_other
+
 
