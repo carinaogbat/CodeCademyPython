@@ -74,3 +74,29 @@ print(substring_between_letters("apple", "p", "e"))
 # should print "pl"
 print(substring_between_letters("apple", "p", "c"))
 # should print "apple"
+
+
+#QUESTION
+# Write a function named count_multi_char_x that takes a string named word and a string
+#  named x. This function should do the same thing as the count_char_x function you just 
+# wrote - it should return the number of times x appears in word. However, this time, 
+# make sure your function works when x is multiple characters long.
+
+# For example, count_multi_char_x("Mississippi", "iss") should return 2
+#MY SOLUTION
+# Write your count_multi_char_x function here:
+def count_multi_char_x(word, x):
+
+  return word.count(x)
+
+# Uncomment these function calls to test your function:
+print(count_multi_char_x("mississippi", "iss"))
+# should print 2
+print(count_multi_char_x("apple", "pp"))
+# should print 1
+#THEIR SOLUTION
+def count_multi_char_x(word, x):
+  splits = word.split(x)
+  return(len(splits)-1)
+
+  # In our function, we split the first input string using the second input string. What this does is cut the first string into an array of smaller substrings containing the parts not equal to our second parameter x. For example, when splitting "mississippi" with the string "iss", the resulting array will be [“m”, “”, “ippi”]. This includes the characters before "iss" was found, the empty space between the two instances of "iss" and the characters after the last"iss". Be careful! In order to get the correct result we need to return one less than the total number of split sections — in this example, "iss" was in the string twice, resulting in 3
