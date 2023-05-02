@@ -235,3 +235,26 @@ def reverse_string(word):
 #  is exclusive we need to provide the index of one more iteration than what we want to stop at. We want to stop 
 #  at 0, and since we are incrementing by -1, we will set the ending index to -1. Finally, make sure to add the 
 #  third parameter of -1. This makes us increment by -1 at each step.
+
+#QUESTION
+# Write a function called make_spoonerism that takes two strings as parameters named word1 and word2. Finding 
+# the first syllable of a word is a difficult task, so for our function, we’re going to switch the first letters 
+# of each word. Return the two new words as a single string separated by a space.
+#MY SOLUTION
+# Write your make_spoonerism function here:
+def make_spoonerism(word1, word2):
+  new_word1 = word2[0] + word1[1:]
+  new_word2 = word1[0] + word2[1:]
+  return new_word1 + " " + new_word2
+
+# Uncomment these function calls to test your function:
+print(make_spoonerism("Codecademy", "Learn"))
+# should print Lodecademy Cearn
+print(make_spoonerism("Hello", "world!"))
+# should print wello Horld!
+print(make_spoonerism("a", "b"))
+# should print b a
+
+#THEIR SOLUTION
+def make_spoonerism(word1, word2):
+  return word2[0]+word1[1:]+" "+word1[0]+word2[1:]
