@@ -99,4 +99,42 @@ def count_multi_char_x(word, x):
   splits = word.split(x)
   return(len(splits)-1)
 
-  # In our function, we split the first input string using the second input string. What this does is cut the first string into an array of smaller substrings containing the parts not equal to our second parameter x. For example, when splitting "mississippi" with the string "iss", the resulting array will be [“m”, “”, “ippi”]. This includes the characters before "iss" was found, the empty space between the two instances of "iss" and the characters after the last"iss". Be careful! In order to get the correct result we need to return one less than the total number of split sections — in this example, "iss" was in the string twice, resulting in 3
+  # In our function, we split the first input string using the second input string. 
+  # What this does is cut the first string into an array of smaller substrings 
+  # containing the parts not equal to our second parameter x. For example, when 
+  # splitting "mississippi" with the string "iss", the resulting array will be 
+  # [“m”, “”, “ippi”]. This includes the characters before "iss" was found, the 
+  # empty space between the two instances of "iss" and the characters after the
+  #  last"iss". Be careful! In order to get the correct result we need to return one
+  #  less than the total number of split sections — in this example, "iss" was in 
+  # the string twice, resulting in 3
+
+###QUESTION###
+# Create a function called x_length_words that takes a string named sentence and an 
+# integer named x as parameters. This function should return True if every word in 
+# sentence has a length greater than or equal to x.
+#My SOLUTION
+# Write your x_length_words function here:
+def x_length_words(sentence, x):
+  words_in_sentence = sentence.split()
+  for word in words_in_sentence:
+    if len(word) >= x:
+      return True
+    else:
+      return False
+
+
+# Uncomment these function calls to test your tip function:
+print(x_length_words("i like apples", 2))
+# should print False
+print(x_length_words("he likes apples", 2))
+# should print True
+
+#THEIR SOLUTION
+def x_length_words(sentence, x):
+  words = sentence.split(" ")
+  for word in words:
+    if len(word) < x:
+      return False
+  return True
+
