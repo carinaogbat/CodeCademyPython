@@ -104,3 +104,42 @@ def values_that_are_keys(my_dictionary):
   #  it is also a key, we can use the in keyword. This checks the value against all of the keys
   #   in the dictionary to see if it exists as a key as well. If it does, then we append it to 
   #   our list of values which are also keys.
+
+#QUESTION
+# Write a function named max_key that takes a dictionary named my_dictionary as a parameter. 
+# The function should return the key associated with the largest value in the dictionary.
+#MY SOLUTION
+# Write your max_key function here:
+def max_key(my_dictionary):
+  largest_value = 0
+  largest_key = "Carina"
+
+  for key, value in my_dictionary.items():
+    if value > largest_value:
+      largest_value = value
+      largest_key = key
+  return largest_key
+
+
+# Uncomment these function calls to test your  function:
+print(max_key({1:100, 2:1, 3:4, 4:10}))
+# should print 1
+print(max_key({"a":100, "b":10, "c":1000}))
+# should print "c"
+
+#THEIR SOLUTION
+def max_key(my_dictionary):
+  largest_key = float("-inf")
+  largest_value = float("-inf")
+  for key, value in my_dictionary.items():
+    if value > largest_value:
+      largest_value = value
+      largest_key = key
+  return largest_key
+
+# In order to program the max algorithm using dictionaries, we need to keep track of the max value
+#  and the key which is used to access it. We start by using float("-inf") in order to initialize 
+#  them to the lowest possible value. To retrieve the key and value at the same time, we use the
+#  items() function. Inside our loop, we overwrite the current largest value and the key used to
+#   access whenever we find a larger value. We return the largest value’s key once we have iterated
+#   through the entire dictionary.
