@@ -72,3 +72,35 @@ def add_ten(my_dictionary):
   for key in my_dictionary.keys():
     my_dictionary[key] += 10
   return my_dictionary
+
+#QUESTION
+# Create a function named values_that_are_keys that takes a dictionary named my_dictionary as
+#  a parameter. This function should return a list of all values in the dictionary that are
+#   also keys.
+#MY SOLUTION:
+# Write your values_that_are_keys function here:
+def values_that_are_keys(my_dictionary):
+  values_and_keys = []
+  for value in my_dictionary.values():
+    if value in my_dictionary.keys():
+      values_and_keys.append(value)
+  return values_and_keys
+
+# Uncomment these function calls to test your  function:
+print(values_that_are_keys({1:100, 2:1, 3:4, 4:10}))
+# should print [1, 4]
+print(values_that_are_keys({"a":"apple", "b":"a", "c":100}))
+# should print ["a"]
+
+#THEIR SOLUTION
+def values_that_are_keys(my_dictionary):
+  value_keys = []
+  for value in my_dictionary.values():
+    if value in my_dictionary:
+      value_keys.append(value)
+  return value_keys
+
+  # For this solution, we iterate through every value within the dictionary. In order to check if
+  #  it is also a key, we can use the in keyword. This checks the value against all of the keys
+  #   in the dictionary to see if it exists as a key as well. If it does, then we append it to 
+  #   our list of values which are also keys.
