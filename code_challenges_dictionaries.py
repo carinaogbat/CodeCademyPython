@@ -162,3 +162,40 @@ print(word_length_dictionary(["a", ""]))
 # should print {"a": 1, "": 0}
 
 #THEIR SOLUTION IS THE SAME AS ABOVE
+
+#QUESTION
+# Write a function named frequency_dictionary that takes a list of elements named words as a 
+# parameter. The function should return a dictionary containing the frequency of each element 
+# in words.
+#MY SOLUTION
+# Write your frequency_dictionary function here:
+def frequency_dictionary(words):
+  freq_dict = {}
+  for word in words:
+    if word not in freq_dict:
+      freq_dict[word] = 0
+    if word in freq_dict:
+      freq_dict[word] += 1
+  return freq_dict
+
+# Uncomment these function calls to test your  function:
+print(frequency_dictionary(["apple", "apple", "cat", 1]))
+# should print {"apple":2, "cat":1, 1:1}
+print(frequency_dictionary([0,0,0,0,0]))
+# should print {0:5}
+
+#THEIR SOLUTION
+def frequency_dictionary(words):
+  freqs = {}
+  for word in words:
+    if word not in freqs:
+      freqs[word] = 0
+    freqs[word] += 1
+  return freqs
+
+  # To create a new dictionary we set a variable equal to {}. We iterate through each of the 
+  # strings in the list of strings and check if it is already in our dictionary using the in 
+  # keyword. If it is not then we add it as a new key-value pair where the value is 0. Regardless
+  #  of whether the string was already in the dictionary, increase the value by 1. This will 
+  #  make it so all new entries will have a value of 1 and all existing entries will increase 
+  #  their old value by 1.
