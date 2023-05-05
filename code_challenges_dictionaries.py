@@ -199,3 +199,23 @@ def frequency_dictionary(words):
   #  of whether the string was already in the dictionary, increase the value by 1. This will 
   #  make it so all new entries will have a value of 1 and all existing entries will increase 
   #  their old value by 1.
+
+  #QUESTION
+  # Create a function named unique_values that takes a dictionary named my_dictionary as a 
+  # parameter. The function should return the number of unique values in the dictionary.
+  # Write your unique_values function here:
+#MY SOLUTION
+def unique_values(my_dictionary):
+  unique_values = []
+  for value in my_dictionary.values():
+    if value not in unique_values:
+      unique_values.append(value)
+  return len(unique_values)
+      
+
+# Uncomment these function calls to test your  function:
+print(unique_values({0:3, 1:1, 4:1, 5:3}))
+# should print 2
+print(unique_values({0:3, 1:3, 4:3, 5:3}))
+# should print 1
+#THEIR SOLUTION WAS THE SAME
