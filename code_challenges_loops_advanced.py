@@ -114,3 +114,27 @@ def same_values(lst1, lst2):
 
 #Uncomment the line below when your function is done
 print(same_values([5, 1, -10, 3, 3], [5, 10, -10, 3, 5]))
+
+#QUESTION
+# Create a function named reversed_list() that takes two lists of the same size as 
+# parameters named lst1 and lst2.
+
+# The function should return True if lst1 is the same as lst2 reversed. The function should
+#  return False otherwise.
+
+# For example, reversed_list([1, 2, 3], [3, 2, 1]) should return True.
+
+#Write your function here
+def reversed_list(lst1, lst2):
+  lst2_reversed = lst2[::-1]
+  for index in range(len(lst2_reversed)):
+      if lst1[index] == lst2_reversed[index]:
+        continue
+      else:
+        return False
+  return True
+
+
+#Uncomment the lines below when your function is done
+#print(reversed_list([1, 2, 3], [3, 2, 1]))
+#print(reversed_list([1, 5, 3], [3, 2, 1]))
