@@ -61,7 +61,7 @@ with open('logger.csv') as log_csv_file:
 # \n', 'Stephanie Morrow,53,3bad04a5fc0a7ec33735ae45535f354887988f35        
 # \n', 'Timothy Ramos,34,b4930920b5256c4e592541297e43a556c8fe33a8 \n', '\n']
 
-#Python has another option for reading csv files, convertin the data into a dictionary using the csv library’s 
+#Python has another option for reading csv files, converting the data into a dictionary using the csv library’s 
 # DictReader object. Here’s how we’d create a list of the email addresses of all of the users in the above table:
 import csv
  
