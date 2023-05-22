@@ -108,6 +108,7 @@ class LinkedList:
             current_node = next_node
 
 #TWO POINTER LINKED LIST TECHNIQUES
+#TWO POINTERS MOVING IN PARALLEL
 def nth_last_node(linked_list, n):
   current = None
   tail_seeker = linked_list.head_node
@@ -122,3 +123,30 @@ def nth_last_node(linked_list, n):
         current = current.get_next_node()
   return current
        
+
+#POINTERS AT DIFFERENT SPEEDS
+#POINTER ONE TWICE AS FAST AS POINTER TWO
+# from LinkedList import LinkedList
+
+# Complete this function:
+def find_middle(linked_list):
+  fast_pointer = linked_list.head_node
+  slow_pointer = linked_list.head_node
+  while fast_pointer is not None:
+    fast_pointer = fast_pointer.get_next_node()
+    if fast_pointer is not None:
+      fast_pointer = fast_pointer.get_next_node()
+      slow_pointer = slow_pointer.get_next_node()
+  return slow_pointer
+
+def generate_test_linked_list(length):
+  linked_list = LinkedList()
+  for i in range(length, 0, -1):
+    linked_list.insert_beginning(i)
+  return linked_list
+
+# Use this to test your code:
+test_list = generate_test_linked_list(7)
+print(test_list.stringify_list())
+middle_node = find_middle(test_list)
+print(middle_node.value)
