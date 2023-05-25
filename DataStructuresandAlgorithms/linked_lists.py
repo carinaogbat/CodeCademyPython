@@ -67,10 +67,10 @@ class LinkedList:
     new_node.set_next_node(self.head_node)
     self.head_node = new_node
 
-    def insert_end(self, new_value):
-      new_node = Node(new_value)
-      current_node = self.get_head_node()
-      next_node = current_node.get_next_node()
+  def insert_end(self, new_value):
+    new_node = Node(new_value)
+    current_node = self.get_head_node()
+    next_node = current_node.get_next_node()
     while current_node:
       if current_node.get_next_node() == None:
         current_node.set_next_node(new_node)
@@ -150,3 +150,4 @@ test_list = generate_test_linked_list(7)
 print(test_list.stringify_list())
 middle_node = find_middle(test_list)
 print(middle_node.value)
+#added handwritten linked list notes
