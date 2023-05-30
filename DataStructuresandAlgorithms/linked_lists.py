@@ -190,3 +190,33 @@ class DoublyLinkedList:
     # current_tail = self.tail_node
     if self.tail_node is None:
       self.tail_node = new_head
+
+ def add_to_tail(self, new_value):
+    new_tail = Node(new_value)
+    current_tail = self.tail_node
+
+    if current_tail != None:
+      current_tail.set_next_node(new_tail)
+      new_tail.set_prev_node(current_tail)
+
+    self.tail_node = new_tail
+
+    if self.head_node == None:
+      self.head_node = new_tail
+
+  def remove_head(self):
+    removed_head = self.head_node
+
+    if removed_head == None:
+      return None
+
+    self.head_node = removed_head.get_next_node()
+
+    if self.head_node != None:
+      self.head_node.set_prev_node(None)
+
+    if removed_head == self.tail_node:
+      self.remove_tail()
+
+    return removed_head.get_value()
+
