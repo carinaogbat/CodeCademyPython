@@ -236,3 +236,16 @@ class DoublyLinkedList:
       
       return removed_tail.value
 
+    
+    def remove_by_value(self, value_to_remove):
+      node_to_remove = None
+      current_node = self.head_node
+      while current_node != None:
+        if current_node.value == value_to_remove:
+          node_to_remove = current_node
+          break
+        current_node = current_node.get_next_node()
+      if node_to_remove == None:
+        return None
+
+
