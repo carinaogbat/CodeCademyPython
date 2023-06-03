@@ -272,4 +272,23 @@ class DoublyLinkedList:
       
       return node_to_remove
 
+# Create your subway line here:
+subway = DoublyLinkedList()
+subway.add_to_head("Times Square")
+subway.add_to_head("Grand Central")
+subway.add_to_head("Central Park")
+print(subway.stringify_list())
+subway.add_to_tail("Penn Station")
+subway.add_to_tail("Wall Street")
+subway.add_to_tail("Brooklyn Bridge")
+print(subway.stringify_list())
+subway.remove_head()
+#removes central park without iterating through
+subway.remove_tail()
+#removes brooklyn bridge without iterating through
+print(subway.stringify_list())
+subway.remove_by_value("Times Square")
+#removes through iteration
+print(subway.stringify_list())
+
 
