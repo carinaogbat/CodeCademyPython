@@ -220,57 +220,57 @@ class DoublyLinkedList:
 
     return removed_head.get_value()
 
-    def remove_tail(self):
-      removed_tail = self.tail_node
+  def remove_tail(self):
+    removed_tail = self.tail_node
 
-      if removed_tail is None:
-        return None
-      
-      self.tail_node = removed_tail.prev_node
+    if removed_tail is None:
+      return None
+    
+    self.tail_node = removed_tail.prev_node
 
-      if self.tail_node != None:
-        self.tail_node.set_next_node(None)
+    if self.tail_node != None:
+      self.tail_node.set_next_node(None)
 
-      if removed_tail == self.head_node:
-        self.remove_head()
-      
-      return removed_tail.value
+    if removed_tail == self.head_node:
+      self.remove_head()
+    
+    return removed_tail.value
 
     
-    def remove_by_value(self, value_to_remove):
-      node_to_remove = None
-      current_node = self.head_node
-      while current_node != None:
-        if current_node.value == value_to_remove:
-          node_to_remove = current_node
-          break
-        current_node = current_node.get_next_node()
-      if node_to_remove == None:
-        return None
+  def remove_by_value(self, value_to_remove):
+    node_to_remove = None
+    current_node = self.head_node
+    while current_node != None:
+      if current_node.value == value_to_remove:
+        node_to_remove = current_node
+        break
+      current_node = current_node.get_next_node()
+    if node_to_remove == None:
+      return None
 
-      while current_node != None:
-        if current_node.get_value() == value_to_remove:
-          node_to_remove = current_node
-          break
+    while current_node != None:
+      if current_node.get_value() == value_to_remove:
+        node_to_remove = current_node
+        break
 
-        current_node = current_node.get_next_node()
+      current_node = current_node.get_next_node()
 
-      if node_to_remove == None:
-        return None
+    if node_to_remove == None:
+      return None
+    
+    if node_to_remove == self.head_node:
+      self.remove_head()
+
+    elif node_to_remove == self.tail_node:
+      self.remove_tail()
       
-      if node_to_remove == self.head_node:
-        self.remove_head()
-
-      elif node_to_remove == self.tail_node:
-        self.remove_tail()
-      
-      else:
-        next_node = node_to_remove.get_next_node()
-        prev_node = node_to_remove.get_prev_node()
-        next_node.set_prev_node(prev_node)
-        prev_node.set_next_node(next_node)
-      
-      return node_to_remove
+    else:
+      next_node = node_to_remove.get_next_node()
+      prev_node = node_to_remove.get_prev_node()
+      next_node.set_prev_node(prev_node)
+      prev_node.set_next_node(next_node)
+    
+    return node_to_remove
 
 # Create your subway line here:
 subway = DoublyLinkedList()
