@@ -248,15 +248,15 @@ class DoublyLinkedList:
     if node_to_remove == None:
       return None
 
-    while current_node != None:
-      if current_node.get_value() == value_to_remove:
-        node_to_remove = current_node
-        break
+    # while current_node != None:
+    #   if current_node.get_value() == value_to_remove:
+    #     node_to_remove = current_node
+    #     break
 
-      current_node = current_node.get_next_node()
+    #   current_node = current_node.get_next_node()
 
-    if node_to_remove == None:
-      return None
+    # if node_to_remove == None:
+    #   return None
     
     if node_to_remove == self.head_node:
       self.remove_head()

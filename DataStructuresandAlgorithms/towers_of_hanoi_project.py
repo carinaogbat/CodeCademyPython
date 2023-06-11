@@ -79,6 +79,19 @@ stacks.append(right_stack)
 
 #Set up the Game
 num_disks = int(input("\nHow many disks do you want to play with?"))
+while num_disks < 3:
+  num_disks = int(input("Enter a number greater than or equal to 3\n"))
+for num in range(num_disks, 0, -1):
+  left_stack.push(num)
+num_optimal_moves = 2**num_disks -1
+print(f"\nThe fastest you can solve this game is in {num_optimal_moves} moves")
+
+
+
+#Get User Input
+def get_input():
+  choices = [stack.get_name()[0] for stack in stacks]
+
 
 
 #Get User Input
