@@ -91,8 +91,16 @@ print(f"\nThe fastest you can solve this game is in {num_optimal_moves} moves")
 #Get User Input
 def get_input():
   choices = [stack.get_name()[0] for stack in stacks]
-
-
+  while True:
+    for i in range(len(stacks)):
+      name = stacks[i].get_name()
+      letter = choices[i]
+      print(f"Enter {letter} for {name}")
+    user_input = input("")
+    if user_input in choices:
+      for i in range(len(stacks)):
+        if user_input == choices[i]:
+          return stacks[i]
 
 #Get User Input
 
