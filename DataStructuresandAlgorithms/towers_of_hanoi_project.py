@@ -102,7 +102,15 @@ def get_input():
         if user_input == choices[i]:
           return stacks[i]
 
-#Get User Input
-
         
 #Play the Game
+num_user_moves = 0
+while right_stack.get_size() != num_disks:
+  print("\n\n\n...Current Stacks...")
+  for stack in stacks:
+    stack.print_items()
+  while True:
+    print("\nWhich stack do you want to move to?\n")
+    from_stack = get_input()
+    print("\nWhich stack do you want to move to?\n")
+    to_stack = get_input()
