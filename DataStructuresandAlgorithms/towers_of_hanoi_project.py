@@ -110,7 +110,14 @@ while right_stack.get_size() != num_disks:
   for stack in stacks:
     stack.print_items()
   while True:
-    print("\nWhich stack do you want to move to?\n")
+    print("\nWhich stack do you want to move from?\n")
     from_stack = get_input()
     print("\nWhich stack do you want to move to?\n")
     to_stack = get_input()
+    if from_stack() == None:
+      print("\n\nInvalid Move. Try Again")
+    elif to_stack == None or from_stack.peek() < to_stack.peek():
+      disk = from_stack.pop()
+      to_stack.push(disk)
+      num_user_moves += 1
+      break
