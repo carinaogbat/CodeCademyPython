@@ -37,3 +37,8 @@ class HashMap:
   def retrieve(self, key):
     array_index = self.compressor(self.hash(key))
     return self.array[array_index]
+    
+#create a hashmap, store a key and value, retrieve and print it
+hash_map = HashMap(20)
+hash_map.assign("gneiss", "metamorphic")
+print(hash_map.retrieve("gneiss"))
